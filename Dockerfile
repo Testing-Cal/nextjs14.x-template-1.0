@@ -1,0 +1,16 @@
+FROM node:16.13.2
+ENV context ""
+ENV port 3012
+RUN mkdir -p /usr/src
+RUN chown -R node:node /usr/src/
+RUN chmod -R 775 /usr/src/
+WORKDIR /usr/src
+COPY . /usr/src
+RUN chown -R node:node /usr/src/
+USER node
+RUN npm install
+
+RUN npm run-script build
+
+ENTRYPOINT ["npm", "--", "run", "dev","--port=${port}"]
+EXPOSE 3012
