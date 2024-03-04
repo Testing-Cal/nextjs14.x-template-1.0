@@ -2,10 +2,10 @@
   "name": "nextjs-template-1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port=${port}",
     "lint": "next lint",
     "build": "next build",
-    "start": "next start -p 3012",
+    "start": "next start",
     "test": "jest --watchAll=false -u",
     "test:ci": "jest --ci",
     "sonar": "sonar-scanner"
