@@ -6,7 +6,8 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watchAll=false -u",
+    "test": "jest --watchAll=false -u --coverage",
+    "coverage": "jest --watchAll=false -u --coverage",
     "test:ci": "jest --ci",
     "sonar": "sonar-scanner"
   },
