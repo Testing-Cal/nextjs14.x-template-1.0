@@ -327,7 +327,7 @@ pipeline {
                                 """
                             }
                         }
-                        /*else if ("${list[i]}" == "'SonarQubeScan'" && env.ACTION == 'DEPLOY' && stage_flag['sonarScan']) {
+                        else if ("${list[i]}" == "'SonarQubeScan'" && env.ACTION == 'DEPLOY' && stage_flag['sonarScan']) {
                           stage('SonarQube Scan') {
                              
                               if (env.SONAR_CREDENTIAL_ID != null && env.SONAR_CREDENTIAL_ID != '') {
@@ -353,7 +353,7 @@ pipeline {
                                    }
                              }
                            }
-                        } */
+                        }
                         else if ("${list[i]}" == "'ContainerImageScan'" && stage_flag['containerScan']) {
                             stage("Container Image Scan") {
                                 if (env.CONTAINERSCANTYPE == 'XRAY') {
