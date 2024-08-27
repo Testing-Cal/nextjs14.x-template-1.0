@@ -332,7 +332,7 @@ pipeline {
                              
                                env.sonar_org = "${metadataVars.sonarOrg}"
                                env.sonar_project_key = "${metadataVars.sonarProjectKey}"
-                               env.sonar_host = "$sonar_host"
+                               env.sonar_host = "${metadataVars.sonarHost}"
 
                                if (env.SONAR_CREDENTIAL_ID != null && env.SONAR_CREDENTIAL_ID != '') {
                                    withCredentials([usernamePassword(credentialsId: "$SONAR_CREDENTIAL_ID", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
