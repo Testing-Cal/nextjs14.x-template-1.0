@@ -1,4 +1,4 @@
-FROM node:20.11.1
+FROM node:20.11.1-slim
 ENV context ""
 ENV port 3012
 RUN mkdir -p /usr/src
